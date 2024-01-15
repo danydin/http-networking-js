@@ -4,13 +4,16 @@
   "description": "",
   "main": "fetch.js",
   "scripts": {
-    "start": "./crawler_project/main.js",
-    "test": "test"
+    "start": "node crawler_project/main.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "jsdom": "^23.2.0"
   }
 }
