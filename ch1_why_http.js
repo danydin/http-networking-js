@@ -1,14 +1,16 @@
-// node fetch.js 
-
 async function main() {
 
   const apiKey = generateKey()
-  const items = await getItemData()
-
+  const itemURL = 'https://api.boot.dev/v1/courses_rest_api/learn-http/items'
+  
+  const items = await getData(itemURL)
+  
   logItems(items)
-
-  async function getItemData() {
-    const response = await fetch('https://api.boot.dev/v1/courses_rest_api/learn-http/items', {
+  
+  // don't touch below this line
+  
+  async function getData(url) {
+    const response = await fetch(url, {
       method: 'GET',
       mode: 'cors',
       headers: {
@@ -18,7 +20,7 @@ async function main() {
     })
     return response.json()
   }
-
+  
   function generateKey() {
     const characters = 'ABCDEF0123456789'
     let result = ''
@@ -27,13 +29,15 @@ async function main() {
     }
     return result
   }
-
+  
   function logItems(items) {
     for (const item of items) {
       console.log(item.name)
     } 
   }
+  
 
+  
 }
 
 main()
