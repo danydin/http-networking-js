@@ -18,3 +18,5 @@ await fetch(url, {
 * HTTP methods (get,put,post,delete) map to crud actions (made by the backend deves) by convention
 The bulk of the logic in most web applications is "CRUD" logic. The web interface allows users to create, read, update and delete various resources. Think of a social media site - users are basically creating, reading, updating and deleting their social posts. They are also creating, reading, updating and deleting their user accounts. It's CRUD all the way down!
 
+* You need to know the basics, like "2XX is good", "4XX is a client error", and "5XX is a server error". That said, you don't need to memorize all the codes, they're easy to look up.
+
